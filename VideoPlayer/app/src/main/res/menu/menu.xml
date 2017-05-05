@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fuck="http://schemas.android.com/apk/res-auto" >
+  <!--  <item
+        fuck:showAsAction="always"
+        android:id="@+id/refresh_video"
+        android:icon="@drawable/refresh"
+        android:title="刷新" />-->
+    <item android:title="fuck"
+        android:icon="@drawable/settings"
+        fuck:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/scanner_all"
+                android:icon="@drawable/search"
+                android:title="全盘扫描" />
+          <!--  <item
+                android:icon="@mipmap/logo"
+                android:title="检查更新" />
+            <item
+                android:icon="@mipmap/logo"
+                android:title="分享" />
+            <item
+                android:icon="@mipmap/logo"
+                android:title="@string/local_file"/>-->
+        </menu>
+    </item>
+
+</menu>

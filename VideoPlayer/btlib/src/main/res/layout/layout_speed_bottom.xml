@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/color1"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15dp"
+            android:gravity="center_vertical"
+            android:text="↑: 3.3KB/s"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_toRightOf="@+id/tv_up"
+            android:gravity="center_vertical"
+            android:text="↓: 3.3KB/s"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_15dp"
+            android:gravity="center_vertical"
+            android:text="可用空间：101.5GB"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+</RelativeLayout>

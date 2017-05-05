@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.software.videoplayer">
+
+    <!-- 读写sd卡的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 请求访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 请求访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取设备的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- U盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58ac0c6b8f4a9d1263000d9f" />
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/WebShow" />
+        <activity android:name=".activity.video.ScreenShotActivity" />
+        <activity
+            android:name=".activity.video.DetailPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Player"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+            <category android:name="android.intent.category.DEFAULT" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:mimeType="video/*" />
+            <data android:mimeType="audio/*" />
+            <data android:mimeType="application/mp4" />
+            <data android:mimeType="*/rmvb" />
+            <data android:mimeType="*/avi" />
+            <data android:mimeType="*/mkv" />
+            <data android:mimeType="application/mpeg*" />
+            <data android:mimeType="application/ogg" />
+            <data android:mimeType="application/vnd.rn-realmedia*" />
+            <data android:mimeType="application/3gpp*" />
+            <data android:mimeType="application/vnd.3gp*" />
+            <data android:mimeType="application/vnd.dvb*" />
+            <data android:mimeType="application/vnd.dolby*" />
+            <data android:mimeType="application/octet-stream" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:mimeType="audio/*" android:scheme="http" />
+            <data android:mimeType="audio/*" android:scheme="rtsp" />
+            <data android:mimeType="audio/*" android:scheme="file" />
+            <data android:mimeType="audio/*" android:scheme="content" />
+            <data android:mimeType="audio/*" android:scheme="mms" />
+            <data android:mimeType="video/*" android:scheme="http" />
+            <data android:mimeType="video/*" android:scheme="rtsp" />
+            <data android:mimeType="video/*" android:scheme="file" />
+            <data android:mimeType="video/*" android:scheme="content" />
+            <data android:mimeType="video/*" android:scheme="mms" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="content" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="rtsp" />
+            <data android:scheme="mms" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="video/*" />
+            <data android:mimeType="application/sdp" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="http" />
+            <data android:mimeType="video/*" />
+        </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="mobo-http" />
+        </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.video.VideoFileShowActivity" />
+        <activity android:name=".activity.file.LocaleFileBrowser" />
+        <activity android:name=".activity.file.LocaleMediaFileBrowser" />
+        <activity android:name=".activity.file.LocaleFileGallery" />
+        <activity
+            android:name=".activity.music.MusicPlayerActivity"
+            android:theme="@style/Splash" />
+        <activity android:name=".activity.BaseActivity1" />
+
+        <service android:name=".service.PlaybackService">
+            <intent-filter>
+                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_TOGGLE" />
+                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_NEXT" />
+                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_LAST" />
+                <action android:name="io.github.ryanhoo.music.ACTION.STOP_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activity.video.VideoFolderShowActivity" />
+        <activity android:name=".activity.video.HistoryActivity" />
+        <activity android:name=".activity.video.PrivateActivity" />
+        <activity
+            android:name=".activity.video.ImageShowActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_image_show"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activity.cloud.WebPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".activity.cloud.WebShowActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/WebShow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.video.LockActivity"
+            android:theme="@style/Splash" />
+        <activity android:name=".activity.video.RegisterActivity" />
+        <activity android:name=".activity.video.FindPassWordActivity" />
+        <activity android:name=".activity.bt.TorrentAddActivity" />
+        <activity android:name=".activity.music.PlayListActivity"/>
+
+        <service
+            android:name=".service.BtCacheSerVice"
+            android:enabled="false"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?selectableItemBackground"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="@dimen/ten">
+    <CheckBox
+        android:id="@+id/bt_check"
+        android:visibility="gone"
+        android:layout_margin="@dimen/five"
+        android:layout_gravity="center_vertical"
+        android:button="@drawable/my_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginRight="@dimen/ten"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/name"
+            android:lines="1"
+            android:layout_marginRight="@dimen/view_50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <ProgressBar
+            android:progress="0"
+            android:max="100"
+            android:layout_below="@id/name"
+            android:id="@+id/process_bar"
+            android:background="@drawable/process_bg"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/dowm_message"
+            android:layout_below="@id/process_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="right"
+            android:layout_alignRight="@+id/process_bar"
+            android:layout_below="@id/process_bar"
+            android:layout_toRightOf="@id/dowm_message"
+            android:id="@+id/state_txt"
+            android:lines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/ten"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/bt_play"
+        android:src="@drawable/bt_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/state_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

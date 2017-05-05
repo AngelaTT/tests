@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/five"
+    android:paddingBottom="@dimen/five"
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="wrap_content">
+
+
+
+    <CheckBox
+        android:layout_marginLeft="@dimen/view_20dp"
+        android:id="@+id/pp_sa"
+        android:layout_width="@dimen/view_36dp"
+        android:layout_height="@dimen/view_36dp"
+        android:layout_gravity="center"
+        android:button="@drawable/all_checkbox"
+        android:focusable="false"
+        tools:ignore="RtlHardcoded" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <TextView
+        android:padding="@dimen/ten"
+        android:drawableLeft="@drawable/my_lock"
+        android:id="@+id/pp_ap"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/pp_hv"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_marginRight="@dimen/view_10dp"
+        android:layout_marginLeft="@dimen/view_10dp"
+        android:padding="@dimen/ten"
+        android:drawableLeft="@drawable/my_delete"
+        android:id="@+id/pp_dl"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

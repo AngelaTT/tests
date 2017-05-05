@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/toolbar_spinner"
+    android:gravity="center_vertical">
+
+   <!-- <Spinner
+        android:id="@+id/toolbar_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/BaseTheme.Toolbar.Spinner"/>-->
+
+    <ImageView
+        android:id="@+id/iv_fenlei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fenlei"
+        android:layout_marginTop="@dimen/margin_6dp"/>
+    <TextView
+        android:id="@+id/tv_fenlei"
+        android:layout_toRightOf="@+id/iv_fenlei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:text="@string/main_tv1"
+        android:textSize="@dimen/text_20sp"
+        android:textColor="@color/colorWhite"/>
+    <ImageView
+        android:id="@+id/iv_genduo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gengduo"/>
+</RelativeLayout>

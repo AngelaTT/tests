@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/about_bt_Rl"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_20dp"
+    android:paddingBottom="@dimen/margin_20dp">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/margin_65dp"
+        android:layout_height="@dimen/margin_65dp"
+        android:src="@drawable/baoyou"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9.9元包邮"
+        android:textSize="@dimen/text_16sp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_marginLeft="@dimen/margin_6dp"
+        android:layout_marginTop="@dimen/margin_10dp"/>
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9.9包邮"
+        android:textColor="@color/colorGray3"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="@dimen/margin_6dp"
+        android:layout_marginTop="@dimen/margin_6dp"/>
+    <Button
+        android:id="@+id/bt_download"
+        android:layout_width="@dimen/margin_75dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:text="下载"
+        android:textColor="@color/colorHome"
+        android:textSize="@dimen/text_16sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/xiazaikuang"/>
+
+</RelativeLayout>

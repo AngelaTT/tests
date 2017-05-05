@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreferenceCompat
+        android:key="@string/pref_key_autostart"
+        android:title="@string/pref_autostart_title"
+        android:summary="@string/pref_autostart_summary"
+        android:persistent="false" />
+
+    <PreferenceCategory
+        android:title="@string/pref_power_management_category">
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_shutdown_downloads_complete"
+            android:title="@string/pref_shutdown_downloads_complete_title"
+            android:summary="@string/pref_shutdown_downloads_complete_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_cpu_do_not_sleep"
+            android:title="@string/pref_cpu_do_not_sleep_title"
+            android:summary="@string/pref_cpu_do_not_sleep_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_download_and_upload_only_when_charging"
+            android:title="@string/pref_download_and_upload_only_when_charging_title"
+            android:summary="@string/pref_download_and_upload_only_when_charging_summary"
+            android:persistent="false" />
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_battery_control"
+            android:title="@string/pref_battery_control_title"
+            android:summary="@string/pref_battery_control_summary"
+            android:persistent="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

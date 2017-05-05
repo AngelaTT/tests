@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/mp.divider.xlarge"
+    android:orientation="vertical"
+    tools:context="com.software.videoplayer.activity.video.FindPassWordActivity">
+    <TextView
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:text="你最爱的人是？"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/fp_as"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:hint="答案"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/darkGray"
+        android:id="@+id/fp_ok"
+        android:background="@drawable/button"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:text="确认"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

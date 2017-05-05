@@ -1,0 +1,119 @@
+<LinearLayout
+    android:id="@+id/sliding_menu"
+    android:layout_alignParentRight="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@color/translucence"
+    android:gravity="center"
+    android:padding="@dimen/ten"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="@dimen/view_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="播放速度："
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/txt_subtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/view_20dp"
+                android:src="@drawable/icon_subtract" />
+
+            <TextView
+                android:id="@+id/txt_speed"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="1.0"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/txt_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_20dp"
+                android:src="@drawable/icon_add" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/view_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginRight="@dimen/view_20dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="界面比例："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <RadioGroup
+            android:id="@+id/screen_size"
+            android:checkedButton="@+id/default_size"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/default_size"
+                android:layout_marginRight="@dimen/view_20dp"
+                android:textColor="@color/setting_txt_color"
+                android:button="@null"
+                android:text="默认"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/normal_size"
+                android:layout_marginRight="@dimen/view_20dp"
+                android:textColor="@color/setting_txt_color"
+                android:button="@null"
+                android:text="16:9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/small_size"
+                android:textColor="@color/setting_txt_color"
+                android:button="@null"
+                android:text="4:3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Switch
+        android:layout_marginTop="@dimen/view_20dp"
+        android:id="@+id/switch_circulation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="循环播放："
+        android:textColor="@color/white" />
+
+    <Switch
+        android:id="@+id/switch_hard_decode"
+        android:layout_marginTop="@dimen/view_20dp"
+        android:textColor="@color/white"
+        android:text="开启硬解："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

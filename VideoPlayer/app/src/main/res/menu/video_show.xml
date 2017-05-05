@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fuck="http://schemas.android.com/apk/res-auto">
+    <item
+        fuck:showAsAction="ifRoom"
+        android:title="@string/file_view"
+        android:icon="@mipmap/logo"
+        android:id="@+id/fuck_view_change" />
+</menu>

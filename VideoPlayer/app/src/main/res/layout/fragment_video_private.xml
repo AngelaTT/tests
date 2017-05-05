@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.software.videoplayer.fragment.video.VideoPrivateFragment">
+        <ImageView
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/five"
+            android:id="@+id/private_img"
+            android:src="@drawable/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded" />
+        <TextView
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_alignBottom="@id/private_img"
+            android:layout_alignTop="@id/private_img"
+            android:layout_toRightOf="@id/private_img"
+            android:text="@string/private_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded" />
+        <TextView
+            android:gravity="center"
+            android:textSize="12sp"
+            android:drawablePadding="@dimen/five"
+            android:textColor="@color/colorGray"
+            android:layout_alignBottom="@id/private_img"
+            android:layout_alignTop="@id/private_img"
+            android:layout_marginRight="@dimen/ten"
+            android:drawableRight="@drawable/more"
+            android:layout_alignParentRight="true"
+            android:text="@string/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlHardcoded" />
+        <LinearLayout
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginRight="@dimen/ten"
+            android:gravity="center_vertical"
+            android:layout_below="@id/private_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RtlHardcoded">
+            <ImageView
+                android:scaleType="fitCenter"
+                android:src="@drawable/lock_img"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@drawable/lock_img"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="@dimen/ten"
+                android:src="@drawable/lock_img"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+</RelativeLayout>
+
+

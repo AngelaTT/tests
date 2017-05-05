@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/about_bt_Rl"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_20dp"
+    android:paddingBottom="@dimen/margin_20dp"
+    android:id="@+id/rl_reaource">
+
+    <ImageView
+        android:id="@+id/file_icon"
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/margin_30dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:src="@drawable/wenjianjia"/>
+
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="accs(1)"
+        android:textSize="@dimen/text_16sp"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/file_icon"
+        android:layout_toLeftOf="@+id/bt_select"
+        android:layout_marginLeft="@dimen/margin_6dp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-03/21 15:37"
+        android:textColor="@color/colorGray3"
+        android:layout_toRightOf="@+id/file_icon"
+        android:layout_below="@+id/file_name"
+        android:layout_marginLeft="@dimen/margin_6dp"
+        android:layout_marginTop="@dimen/margin_6dp"/>
+    <Button
+        android:id="@+id/bt_select"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:background="@drawable/selector_resource_select"
+        />
+</RelativeLayout>
+<!--"-->

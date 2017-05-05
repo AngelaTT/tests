@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color2">
+
+    <include
+        android:id="@+id/rl_about_title"
+        layout="@layout/layout_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/margin_10dp"
+        android:text="@string/main_tv14"
+        android:textSize="@dimen/text_16sp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingRight="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_20dp"
+        android:paddingBottom="@dimen/margin_20dp"/>
+
+    <RelativeLayout
+        android:layout_height="@dimen/height_50dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+       style="@style/about_bt_Rl">
+        <ImageView
+            android:id="@+id/iv_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dajiadouzaiyong"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_tv15"
+            android:layout_toRightOf="@+id/iv_used"
+            android:layout_marginLeft="@dimen/margin_6dp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

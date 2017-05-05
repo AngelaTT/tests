@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.software.videoplayer.activity.cloud.WebShowActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:background="@color/colorPrimary"
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            tools:ignore="UnusedAttribute">
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/cloud_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/ten"
+                android:background="?android:actionBarItemBackground"
+                android:padding="@dimen/ten"
+                android:scaleType="fitCenter"
+                android:text="@string/cloud_player"
+                android:textColor="@android:color/white" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <ProgressBar
+        android:id="@+id/pb_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/process_bg"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/wsa_wb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="hardware"/>
+</LinearLayout>

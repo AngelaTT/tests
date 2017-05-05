@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:layout_width="300dp"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <!--眉头-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/dialog_tv_title"
+            android:text="温馨提示"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <!--内容-->
+    <TextView
+        android:layout_width="300dp"
+        android:padding="16dp"
+        android:textColor="#636363"
+        android:id="@+id/dialog_tv_content"
+        android:gravity="center_vertical"
+        android:text="确定要删除吗?"
+        android:textSize="18sp"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/margin_15dp"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="horizontal"
+        android:layout_height="48dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/dialog_btn_cancel"
+            android:textSize="@dimen/text_16sp"
+            android:background="@drawable/dialog_bottom"
+            android:text="取消"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="确定"
+            android:id="@+id/dialog_btn_sure"
+            android:textSize="@dimen/text_16sp"
+            android:background="@drawable/dialog_bottom_right"
+            android:textColor="@color/colorWhite"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

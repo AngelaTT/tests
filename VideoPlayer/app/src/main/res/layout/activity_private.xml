@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.software.videoplayer.activity.video.PrivateActivity">
+    <GridView
+        android:id="@+id/private_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="multipleChoice"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="false"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/five"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/five" />
+</FrameLayout>

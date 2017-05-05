@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_path"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50dp"
+        android:background="@color/colorGray2"
+        android:gravity="center_vertical"
+        android:text="/storage/emulated/0/download"
+        android:textSize="@dimen/text_16sp"
+        android:layout_marginLeft="@dimen/margin_10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_65dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/delete1"
+            android:gravity="center_horizontal"
+            android:text="删除" />
+
+        <TextView
+            android:id="@+id/tv_move"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/yidon"
+            android:gravity="center_horizontal"
+            android:text="移动" />
+
+        <TextView
+            android:id="@+id/tv_check_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/quanxuan"
+            android:gravity="center_horizontal"
+            android:text="全选" />
+    </LinearLayout>
+
+</LinearLayout>

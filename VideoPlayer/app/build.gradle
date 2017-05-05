@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'android-apt'
+
+android {
+
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'qixiao'
+            keyPassword 'qixiao'
+            storeFile file('src/main/java/videoPlayer.jks')
+            storePassword 'videoplayer'
+        }
+    }
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    aaptOptions.cruncherEnabled = false
+
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId "com.software.videoplayer"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':gsyVideoPlayer')
+    compile files('libs/lite-orm-1.9.2.jar')
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'io.reactivex:rxjava:1.1.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.alibaba:fastjson:1.2.24'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile 'q.rorbin:badgeview:1.0.7'
+    compile 'com.nightonke:blurlockview:1.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.github.se-bastiaan:torrentstream-android:2.3.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile project(path: ':library')
+//    compile project(':btlib')
+}

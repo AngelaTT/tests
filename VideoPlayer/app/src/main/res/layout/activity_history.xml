@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.software.videoplayer.activity.video.HistoryActivity">
+    <android.support.v7.widget.RecyclerView
+        xmlns:recyclerView="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorBackground"
+        android:id="@+id/video_show_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/mp.padding.large"
+        android:clipToPadding="false"
+        recyclerView:layoutManager="@string/mp.list.layoutManager.linear"
+        tools:listitem="@layout/item_local_music" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ht_menu"
+        android:paddingLeft="-1dp"
+        android:paddingBottom="-1dp"
+        android:paddingRight="-1dp"
+        android:background="@drawable/delete_up_line"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:id="@+id/ht_select_all"
+            android:gravity="center"
+            android:text="全选"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:background="@color/darkGray"
+            android:layout_width="1px"
+            android:layout_height="@dimen/view_30dp" />
+
+        <TextView
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:id="@+id/ht_encryption"
+            android:gravity="center"
+            android:text="加密"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:background="@color/darkGray"
+            android:layout_width="1px"
+            android:layout_height="@dimen/view_30dp" />
+
+        <TextView
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/ht_delete"
+            android:textColor="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="删除"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

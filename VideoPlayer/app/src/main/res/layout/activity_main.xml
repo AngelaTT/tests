@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.software.videoplayer.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            tools:ignore="UnusedAttribute">
+
+            <RadioGroup
+                android:id="@+id/bt_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rd_bg"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:checked="true"
+                    android:textColor="@color/radio_color"
+                    android:id="@+id/left_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_rb_bg_l"
+                    android:button="@null"
+                    android:padding="@dimen/mp.padding.normal"
+                    android:text="@string/downloading" />
+
+                <RadioButton
+                    android:textColor="@color/radio_color"
+                    android:id="@+id/right_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_rb_bg"
+                    android:button="@null"
+                    android:padding="@dimen/mp.padding.normal"
+                    android:text="@string/downloaded" />
+            </RadioGroup>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:background="@color/colorLineColor"
+        android:layout_width="match_parent"
+        android:layout_height="2px" />
+
+    <com.software.videoplayer.ui.BottomNavigationGroup
+        android:background="@color/colorNavBg"
+        android:paddingTop="8dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/main_radio_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.software.videoplayer.ui.BottomNavigationButton
+            android:checked="true"
+            android:text="@string/video"
+            app:de_focus_icon="@drawable/video"
+            app:focus_icon="@drawable/video_hover"
+            app:focus_color="@color/colorPrimary"
+            android:textColor="@color/colorMainTextColor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <com.software.videoplayer.ui.BottomNavigationButton
+            android:text="@string/music"
+            app:de_focus_icon="@drawable/music"
+            app:focus_icon="@drawable/music_hover"
+            app:focus_color="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:textColor="@color/colorMainTextColor"
+            android:layout_height="wrap_content" />
+        <com.software.videoplayer.ui.BottomNavigationButton
+            android:text="@string/cloud_player"
+            app:de_focus_icon="@drawable/yunplayer"
+            app:focus_icon="@drawable/yunplayer_hover"
+            app:focus_color="@color/colorPrimary"
+            android:textColor="@color/colorMainTextColor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <com.software.videoplayer.ui.BottomNavigationButton
+            android:gravity="center"
+            app:de_focus_icon="@drawable/button_download"
+            app:focus_icon="@drawable/button_download_hover"
+            app:focus_color="@color/colorPrimary"
+            android:textColor="@color/colorMainTextColor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/bt"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <com.software.videoplayer.ui.BottomNavigationButton
+            android:gravity="center"
+            app:de_focus_icon="@drawable/localfile"
+            app:focus_icon="@drawable/localfile_hover"
+            app:focus_color="@color/colorPrimary"
+            android:textColor="@color/colorMainTextColor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/local_file"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+
+    </com.software.videoplayer.ui.BottomNavigationGroup>
+</LinearLayout>

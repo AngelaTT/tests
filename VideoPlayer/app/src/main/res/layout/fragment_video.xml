@@ -1,0 +1,41 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:weightSum="4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="com.software.videoplayer.fragment.video.VideoFragment">
+                <RelativeLayout
+                    android:id="@+id/rl_local_video"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp" />
+                <RelativeLayout
+                    android:id="@+id/rl_history"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_screenshot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+                    android:id="@+id/rl_private"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+</LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

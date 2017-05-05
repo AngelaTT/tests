@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/item_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mp.list.itemHeight"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/view_10dp"
+        android:layout_marginStart="@dimen/view_10dp"
+        android:layout_marginRight="@dimen/mp.margin.normal"
+        android:layout_marginEnd="@dimen/mp.margin.normal">
+        <CheckBox
+        android:visibility="gone"
+        android:focusable="false"
+        android:layout_marginRight="@dimen/ten"
+        android:button="@drawable/my_checkbox"
+        android:id="@+id/item_check"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/default_thumb"
+            android:id="@+id/music_thumb"
+            android:layout_toRightOf="@+id/item_check"
+            android:layout_width="@dimen/mp.list.itemHeight.thumb"
+            android:layout_height="@dimen/mp.list.itemHeight.thumb"
+            android:contentDescription="@string/music_thumb" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/mp.padding.normal"
+            android:layout_marginStart="@dimen/mp.padding.normal"
+            android:layout_marginTop="@dimen/mp.margin.small"
+            android:layout_alignTop="@+id/music_thumb"
+            android:layout_toRightOf="@+id/music_thumb"
+            android:layout_toEndOf="@+id/music_thumb"
+            style="@style/MP.Theme.TextAppearance.List.Title"
+            android:id="@+id/text_view_name"
+            tools:text="A little bit longer"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/mp.padding.normal"
+            android:layout_marginStart="@dimen/mp.padding.normal"
+            android:layout_marginBottom="@dimen/mp.margin.small"
+            android:layout_alignBottom="@+id/music_thumb"
+            android:layout_toRightOf="@+id/music_thumb"
+            android:layout_toEndOf="@+id/music_thumb"
+            android:layout_below="@id/text_view_name"
+            style="@style/MP.Theme.TextAppearance.List.Hint"
+            android:id="@+id/text_view_artist"
+            android:gravity="bottom"
+            android:layout_height="wrap_content"
+            tools:text="A little bit longer" />
+        <TextView
+            android:layout_marginLeft="@dimen/mp.divider.large"
+            android:layout_marginStart="@dimen/mp.divider.large"
+            android:gravity="bottom"
+            android:layout_alignBottom="@+id/text_view_artist"
+            style="@style/MP.Theme.TextAppearance.List.Hint"
+            android:id="@+id/text_view_duration"
+            android:layout_toEndOf="@id/text_view_artist"
+            android:layout_toRightOf="@+id/text_view_artist"
+            android:layout_below="@+id/text_view_name"
+            android:layout_marginEnd="@dimen/mp.margin.large"
+            android:layout_marginRight="@dimen/mp.margin.large"
+            android:layout_marginTop="@dimen/mp.margin.normal"
+            tools:text="03:22" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">超速播放器</string>
+    <string name="local_file">本地文件</string>
+    <string name="video">视频</string>
+    <string name="music">音乐</string>
+    <string name="cloud_player">云播</string>
+    <string name="bt">BT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="all">全部</string>
+    <string name="local_video">本地视频</string>
+    <string name="play_history">播放历史</string>
+    <string name="screenshot">截图保存文件夹</string>
+    <string name="private_space">私密文件夹</string>
+    <string name="file_view">文件浏览</string>
+
+    <string name="bxfile_media_cnt">(%1$s)</string>
+    <string name="curCatagoryNoFiles">该分类没有文件</string>
+    <string name="curDirNoChilds">当前文件夹没有文件</string>
+    <string name="bxfile_download">已下载文件</string>
+    <string name="bxfile_ram">手机内存</string>
+    <string name="bxfile_sdcard">SD卡内存</string>
+    <string name="bxfile_extsdcard">扩展卡内存</string>
+    <string name="bxfile_image">图片</string>
+    <string name="bxfile_music">音乐</string>
+    <string name="bxfile_video">视频</string>
+    <string name="SDCardNotMounted">SDCard未加载</string>
+
+    <string name="mp.list.layoutManager.linear">LinearLayoutManager</string>
+
+    <!-- Common -->
+
+    <!-- Activity/Fragment Titles -->
+
+    <!-- Play Lists -->
+    <string name="mp.play_list.favorite">Favorite</string>
+
+    <!-- Play Lists - Details -->
+
+    <!-- Main -->
+
+    <!-- Music -->
+
+    <string name="mp.music.default_duration">00:00</string>
+
+    <!-- Local Files -->
+
+    <string name="mp.local_files.music_list.empty">暂无音乐</string>
+    <string name="mp.local_files.music_list.end_summary_formatter">%d 首歌</string>
+
+    <!-- Local Files - File System -->
+
+    <!-- Play Lists - Details -->
+    <string name="mp.play_list.details.empty">No music here, go add some!</string>
+    <string name="mp.play_list.details.footer.end_summary_formatter">%d songs in total</string>
+
+    <!-- Menu -->
+    <string name="music_thumb">music_thumb</string>
+    <string name="new_find">new</string>
+    <string name="mp.menu.add_to_play_list">播放</string>
+    <string name="mp.menu.create_play_list">Create play list</string>
+    <string name="mp.menu.refresh">Refresh</string>
+    <string name="mp.menu.play_now">添加到播放列表</string>
+    <string name="mp.menu.rename">Rename</string>
+    <string name="mp.menu.delete">从播放列表中删除</string>
+
+    <string name="title_activity_image_show">ImageShowActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_link">磁力链接</string>
+    <string name="open_file">种子文件</string>
+    <string name="add">add</string>
+    <string name="downloading">正在下载</string>
+    <string name="downloaded">下载完成</string>
+
+</resources>

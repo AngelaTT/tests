@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:visibility="visible"
+        android:id="@+id/video_show_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="multipleChoice"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="false"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/five"
+        android:listSelector="?android:selectableItemBackground"
+        android:numColumns="2"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="2dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/five"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/sh_menu"
+        android:paddingLeft="-1dp"
+        android:paddingBottom="-1dp"
+        android:paddingRight="-1dp"
+        android:background="@drawable/my_menu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sh_all"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:gravity="center"
+            android:text="全选"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:background="@color/darkGray"
+            android:layout_width="1px"
+            android:layout_height="@dimen/view_30dp" />
+        <TextView
+            android:id="@+id/sh_encryption"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:gravity="center"
+            android:text="加密"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:background="@color/darkGray"
+            android:layout_width="1px"
+            android:layout_height="@dimen/view_30dp" />
+        <TextView
+            android:id="@+id/sh_share"
+            android:textColor="@android:color/holo_orange_dark"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:gravity="center"
+            android:text="分享"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_gravity="center"
+            android:background="@color/darkGray"
+            android:layout_width="1px"
+            android:layout_height="@dimen/view_30dp" />
+
+        <TextView
+            android:paddingTop="@dimen/mp.padding.large"
+            android:paddingBottom="@dimen/mp.padding.large"
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/sh_delete"
+            android:textColor="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="删除"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/mp.divider.xlarge"
+    tools:context="com.software.videoplayer.activity.video.RegisterActivity">
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/ra_pa_f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入六位数字密码"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:inputType="number"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:id="@+id/ra_pa_s"
+        android:hint="请再次输入密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:text="密保问题(帮助您找回密码)：你最爱的人是？"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/ra_pq"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:hint="答案"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:clickable="false"
+        android:textColor="@color/darkGray"
+        android:id="@+id/ra_ok"
+        android:background="@drawable/button"
+        android:layout_marginTop="@dimen/mp.divider.xlarge"
+        android:text="确认"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

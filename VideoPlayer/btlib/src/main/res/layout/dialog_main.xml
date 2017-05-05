@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/height_130dp"
+    android:layout_height="@dimen/height_100dp"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/ll_all_start"
+        style="@style/activity_main_ll"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/iv_all_start"
+            style="@style/activity_main_iv"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_downloadering" />
+
+        <TextView
+            android:id="@+id/tv_all_start"
+            style="@style/activity_main_tv"
+            android:text="@string/main_tv7"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray2"/>
+    <LinearLayout
+        android:id="@+id/ll_all_pause"
+        style="@style/activity_main_ll"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/iv_all_pause"
+            style="@style/activity_main_iv"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_paused" />
+
+        <TextView
+            android:id="@+id/tv_all_pause"
+            style="@style/activity_main_tv"
+            android:text="@string/main_tv8"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

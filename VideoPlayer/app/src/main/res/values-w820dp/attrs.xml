@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomNavigationButton">
+        eclare-styleable name="BottomNavigationButton">
+        <attr name="focus_icon" format="reference" />
+        <attr name="de_focus_icon" format="reference" />
+        <attr name="focus_color" format="color" />
+    </declare-styleable>
+</resources>

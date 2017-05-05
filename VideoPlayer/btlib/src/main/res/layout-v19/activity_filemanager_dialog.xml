@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center">
+
+    <include
+        layout="@layout/statusbar_kitkat"/>
+
+    <include
+        android:id="@+id/ll_file_operate"
+        layout="@layout/file_operate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_65dp"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:id="@+id/view"
+        android:layout_above="@+id/ll_file_operate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color2"/>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/statusBarKitKat"
+        android:layout_above="@+id/view">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/colorHome"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:transitionName="actionBar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@color/colorGray2">
+
+                <TextView
+                    android:id="@+id/title_cur_folder_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center|start"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+                    android:textColor="@color/colorBlack" />
+            </HorizontalScrollView>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/file_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="@color/color2" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_folder_button"
+            android:visibility="gone"
+            android:transitionName="fab"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="-16dp"
+            android:elevation="6dp"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/fab_ripple"
+            android:stateListAnimator="@anim/fab_anim"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/add"
+            android:src="@drawable/ic_add_white_36dp" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

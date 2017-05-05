@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_65dp"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/ll_file_operate">
+
+    <TextView
+        android:id="@+id/tv_file_manager_delete"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/delete1"
+        android:gravity="center_horizontal"
+        android:text="删除" />
+
+    <TextView
+        android:id="@+id/tv_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/yidon"
+        android:gravity="center_horizontal"
+        android:text="移动" />
+
+    <TextView
+        android:id="@+id/tv_check_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/quanxuan"
+        android:gravity="center_horizontal"
+        android:text="全选" />
+</LinearLayout>

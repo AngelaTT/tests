@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.software.videoplayer.fragment.cloud.CloudFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_8dp"
+        android:layout_marginRight="@dimen/view_8dp"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/et_bg"
+        android:orientation="horizontal">
+
+        <EditText
+            android:cursorVisible="false"
+            android:textSize="@dimen/text_14sp"
+            android:hint="输入流播放地址"
+            android:id="@+id/cdf_et"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/view_40dp"
+            android:paddingLeft="@dimen/mp.margin.large"
+            android:layout_marginTop="@dimen/view_4dp"
+            android:layout_marginBottom="@dimen/view_4dp"
+            android:layout_weight="1"
+            android:background="@null" />
+        <ImageView
+            android:padding="@dimen/five"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:id="@+id/search_delete"
+            android:src="@drawable/button_search_delete"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:paddingTop="@dimen/view_10dp"
+            android:paddingBottom="@dimen/view_10dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/go_go"
+            android:layout_width="@dimen/view_50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/button"
+            android:src="@drawable/gogo" />
+    </LinearLayout>
+
+    <GridView
+        android:scrollbars="none"
+        android:paddingTop="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:horizontalSpacing="@dimen/ten"
+        android:verticalSpacing="@dimen/ten"
+        android:id="@+id/cdf_gv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="4" />
+</LinearLayout>
